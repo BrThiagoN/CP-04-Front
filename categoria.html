@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrend - E-commerce de produtos sustentáveis</title>
+    <!--Importando a fonte Poppins (será usada ao decorrer do projeto)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!--Importando os ícones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--Importando o CSS do Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-success fw-bold fs-3" href="#">
+                <i class="fa-solid fa-leaf"></i> EcoTrend
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacao" aria-controls="menuNavegacao" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="menuNavegacao">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="categoria.html">Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contatos</a>
+                    </li>
+                </ul>
+                
+                <form class="d-flex" role="search">
+                    <button class="btn btn-outline-success d-flex align-items-center gap-2" type="button">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Carrinho (4)</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+<!-- Conteúdo da Página de Categorias -->
+    <main class="container mt-5 mb-5">
+        <div class="row">
+            
+            <!-- Barra Lateral de Filtros (Ocupa 3 colunas em telas grandes) -->
+            <aside class="col-12 col-lg-3 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="fw-bold text-success mb-3"><i class="fa-solid fa-filter"></i> Filtros</h5>
+                        
+                        <!-- Filtro por Categoria -->
+                        <h6 class="fw-bold mt-4">Categorias</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="catBeleza">
+                            <label class="form-check-label" for="catBeleza">Beleza Natural</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="catCasa">
+                            <label class="form-check-label" for="catCasa">Casa Ecológica</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="catRoupas">
+                            <label class="form-check-label" for="catRoupas">Roupas Sustentáveis</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="catTecnologia">
+                            <label class="form-check-label" for="catTecnologia">Tecnologia Verde</label>
+                            
+                            <!-- Filtro por Preço -->
+                        <h6 class="fw-bold mt-4">Preço (R$)</h6>
+                        <input type="range" class="form-range" min="0" max="500" step="10" id="filtroPreco">
+                        <div class="d-flex justify-content-between small text-muted">
+                            <span>R$ 0</span>
+                            <span>R$ 500+</span>
+                        </div>
+
+                        <!-- Filtro por Marca -->
+                        <h6 class="fw-bold mt-4">Marcas</h6>
+                        <select class="form-select" aria-label="Filtro de marca">
+                            <option selected>Todas as marcas</option>
+                            <option value="3">BambooTech</option>
+                            <option value="4">EcoTech</option>
+                            <option value="2">Green Life</option>
+                            <option value="1">Natura Eco</option>
+                        </select>
+                        
+                        <button class="btn btn-success w-100 mt-4">Aplicar Filtros</button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Lista de Produtos (Ocupa 9 colunas em telas grandes) -->
+            <section class="col-12 col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="fw-bold m-0">Todos os Produtos</h2>
+                    <span class="text-muted">Mostrando 8 resultados</span>
+                </div>
+                
+                <div class="row g-4">
+                    
+                    <!-- Produto 1 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="imgs/camisa.jpg" class="card-img-top" alt="Camisa">
+                            
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fs-6 fw-bold">Camisa Algodão Orgânico</h5>
+                                <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 89,90</p>
+                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produto 2 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://www.lindurasuy.com/wp-content/uploads/2022/10/1000005798.jpg" class="card-img-top" alt="Shampoo">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fs-6 fw-bold">Shampoo Sólido Vegano</h5>
+                                <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 34,90</p>
+                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produto 3 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://down-br.img.susercontent.com/file/sg-11134201-22110-s7t86jwwlqjvba" class="card-img-top" alt="Escova">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fs-6 fw-bold">Kit Escovas de Bambu</h5>
+                                <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 29,90</p>
+                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Produto 4 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="imgs/carregador.png" class="card-img-top" alt="Carregador">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fs-6 fw-bold">Carregador Solar</h5>
+                                <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 149,90</p>
+                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produto 5 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="imgs/copo_retratil.jpg" class="card-img-top" alt="Copo">
+
+
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fs-6 fw-bold">Copo Retrátil de Silicone</h5>
+                                <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 45,00</p>
+                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produto 6 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="imgs/ecobag.jpg" class="card-img-top" alt="Bolsa">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fs-6 fw-bold">Ecobag de Algodão Cru</h5>
+                                <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 19,90</p>
+                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Produto 7-->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="imgs/babosa.jpg" class="card-img-top" alt="Babosa">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fs-6 fw-bold">Gel de Babosa Natural</h5>
+                                <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 25,00</p>
+                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Produto 8-->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="imgs/camisetadry.jpg" class="card-img-top" alt="Camiseta de Treino Ecológica">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fs-6 fw-bold">Camiseta de Treino com Tecido Reciclado</h5>
+                                <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 59,90</p>
+                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
