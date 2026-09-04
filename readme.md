@@ -28,7 +28,7 @@ Você não precisa baixar nenhum arquivo, instalar programas ou abrir códigos p
 
 Basta clicar no link abaixo para visitar o EcoTrend:
 
-🔗 **https://brthiagon.github.io/CP-04-Front/
+🔗 **https://brthiagon.github.io/CP-04-Front/**
 
 *(Para mais informações sobre o que construímos, basta navegar pelos arquivos HTML e CSS aqui mesmo neste repositório!)*
 
