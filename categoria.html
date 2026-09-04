@@ -37,14 +37,30 @@
                         <a class="nav-link active" aria-current="page" href="categoria.html">Categorias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contato.html">Contatos</a>
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                                         <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Produtos
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="detalhecamisa.html">Camisa de Algodão Orgânico</a></li>
+                            <li><a class="dropdown-item" href="detalheshampoo.html">Shampoo Sólido Vegano</a></li>
+                            <li><a class="dropdown-item" href="detalheescova.html">Kit Escovas de Bambu</a></li>
+                            <li><a class="dropdown-item" href="detalhebabosa.html">Babosa em Gel</a></li>
+
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="categoria.html">Ver todos...</a></li> 
+                        </ul>
                     </li>
                 </ul>
                 
                 <form class="d-flex" role="search">
                     <button class="btn btn-outline-success d-flex align-items-center gap-2" type="button">
                         <i class="fa-solid fa-cart-shopping"></i>
-                        <span>Carrinho (4)</span>
+                        <span>Carrinho (<b id="contador-carrinho">0</b>)</span>
+
+                        </span>
                     </button>
                 </form>
             </div>
@@ -118,7 +134,7 @@
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title fs-6 fw-bold">Camisa Algodão Orgânico</h5>
                                 <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 89,90</p>
-                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                                <button class="btn btn-outline-success w-100 btn-adicionar"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -130,7 +146,7 @@
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title fs-6 fw-bold">Shampoo Sólido Vegano</h5>
                                 <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 34,90</p>
-                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                                <button class="btn btn-outline-success w-100 btn-adicionar"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -142,7 +158,7 @@
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title fs-6 fw-bold">Kit Escovas de Bambu</h5>
                                 <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 29,90</p>
-                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                                <button class="btn btn-outline-success w-100 btn-adicionar"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -154,7 +170,7 @@
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title fs-6 fw-bold">Carregador Solar</h5>
                                 <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 149,90</p>
-                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                                <button class="btn btn-outline-success w-100 btn-adicionar"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -168,7 +184,7 @@
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title fs-6 fw-bold">Copo Retrátil de Silicone</h5>
                                 <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 45,00</p>
-                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                                <button class="btn btn-outline-success w-100 btn-adicionar"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -180,7 +196,7 @@
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title fs-6 fw-bold">Ecobag de Algodão Cru</h5>
                                 <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 19,90</p>
-                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                                <button class="btn btn-outline-success w-100 btn-adicionar"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -191,7 +207,7 @@
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title fs-6 fw-bold">Gel de Babosa Natural</h5>
                                 <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 25,00</p>
-                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                                <button class="btn btn-outline-success w-100 btn-adicionar"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -202,7 +218,7 @@
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title fs-6 fw-bold">Camiseta de Treino com Tecido Reciclado</h5>
                                 <p class="fs-5 fw-bold text-success mb-3 mt-auto">R$ 59,90</p>
-                                <button class="btn btn-outline-success w-100"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                                <button class="btn btn-outline-success w-100 btn-adicionar"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -211,6 +227,78 @@
             </section>
         </div>
     </main>
+        <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-success">
+                        <i class="fa-solid fa-leaf"></i> EcoTrend
+                    </h5>
+                    <p>Promovemos um estilo de vida mais consciente e sustentável através de produtos ecológicos de alta qualidade.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Políticas</h5>
+                    <p><a href="#" class="text-white text-decoration-none">Termos de Uso</a></p>
+                    <p><a href="#" class="text-white text-decoration-none">Política de Privacidade</a></p>
+                    <p><a href="#" class="text-white text-decoration-none">Trocas e Devoluções</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Contato</h5>
+                    <p><i class="fa-solid fa-envelope me-3"></i> ecotrendrfcb@gmail.com.br</p>
+                    <p><i class="fa-solid fa-phone me-3"></i> (11) 97410-7432</p>
+                    <p><i class="fa-solid fa-location-dot me-3"></i> São Paulo, SP</p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Siga-nos</h5>
+                    <a href="#" class="text-white me-4 fs-4"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-white me-4 fs-4"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="text-white me-4 fs-4"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <p class="mb-0">© 2026 EcoTrend. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script>
+        //  Aqui é identificado quantos itens há no carrinho, começando do 0
+        const textoContador = document.getElementById('contador-carrinho');
+
+        //  Esta sequência de código busca na "memória" do navegador se já tem itens salvos. Se não tiver, começa no zero.
+        let itensNoCarrinho = localStorage.getItem('qtdEcoTrend');
+        if (itensNoCarrinho === null) {
+            itensNoCarrinho = 0;
+        }
+
+        //  Atualiza o cabeçalho logo que a página carrega
+        if (textoContador) {
+            textoContador.innerText = itensNoCarrinho;
+        }
+
+        //  A classe btn-adicionar permite identificar todos os botões de adicionar ao carrinho.
+        const botoesComprar = document.querySelectorAll('.btn-adicionar');
+
+        //  Adiciona a ação de clique em cada botão
+        botoesComprar.forEach(function(botao) {
+            botao.addEventListener('click', function(evento) {
+                evento.preventDefault(); // Impede a página de recarregar.
+                
+                itensNoCarrinho++; // Soma +1 na variável.
+                
+                //  Salva o novo número na memória do navegador.
+                localStorage.setItem('qtdEcoTrend', itensNoCarrinho); 
+                
+                //  Atualiza o número na tela.
+                textoContador.innerText = itensNoCarrinho; 
+                
+                //  Dá um aviso na tela para você ter certeza que clicou.
+                alert("Produto adicionado ao carrinho!");
+            });
+        });
+    </script>
 </body>
 </html>

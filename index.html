@@ -59,7 +59,7 @@
                 <form class="d-flex" role="search">
                     <button class="btn btn-outline-success d-flex align-items-center gap-2" type="button">
                         <i class="fa-solid fa-cart-shopping"></i>
-                        <span>Carrinho(4)</span>
+                        <span> Carrinho (<b id ="contador-carrinho">0</b>)</span>
                     </button>
                 </form>
             </div>
@@ -129,7 +129,7 @@
                             <h5 class="card-title fs-6 fw-bold">Camisa Algodão Orgânico</h5>
                             <p class="card-text text-muted small flex-grow-1">Feita com algodão 100% livre de pesticidas e tingimento natural.</p>
                             <p class="fs-5 fw-bold text-success mb-3">R$ 89,90</p>
-                            <button class="btn btn-outline-success w-100 mt-auto">
+                            <button class="btn btn-outline-success w-100 btn-adicionar mt-auto">
                                 <i class="fa-solid fa-cart-plus me-1"></i> Adicionar
                             </button>
                         </div>
@@ -144,7 +144,7 @@
                             <h5 class="card-title fs-6 fw-bold">Shampoo Sólido Vegano</h5>
                             <p class="card-text text-muted small flex-grow-1">Sem plástico na embalagem, rende o equivalente a 3 frascos.</p>
                             <p class="fs-5 fw-bold text-success mb-3">R$ 34,90</p>
-                            <button class="btn btn-outline-success w-100 mt-auto">
+                            <button class="btn btn-outline-success w-100 btn-adicionar mt-auto">
                                 <i class="fa-solid fa-cart-plus me-1"></i> Adicionar
                             </button>
                         </div>
@@ -159,7 +159,7 @@
                             <h5 class="card-title fs-6 fw-bold">Kit Escovas de Bambu (4un)</h5>
                             <p class="card-text text-muted small flex-grow-1">100% biodegradáveis, bactericidas e com cerdas macias.</p>
                             <p class="fs-5 fw-bold text-success mb-3">R$ 29,90</p>
-                            <button class="btn btn-outline-success w-100 mt-auto">
+                            <button class="btn btn-outline-success w-100 btn-adicionar mt-auto">
                                 <i class="fa-solid fa-cart-plus me-1"></i> Adicionar
                             </button>
                         </div>
@@ -174,7 +174,7 @@
                             <h5 class="card-title fs-6 fw-bold">Babosa em Gel</h5>
                             <p class="card-text text-muted small flex-grow-1">Hidratação natural para a pele.</p>
                             <p class="fs-5 fw-bold text-success mb-3">R$ 19,90</p>
-                            <button class="btn btn-outline-success w-100 mt-auto">
+                            <button class="btn btn-outline-success w-100 btn-adicionar mt-auto">
                                 <i class="fa-solid fa-cart-plus me-1"></i> Adicionar
                             </button>
                         </div>
@@ -208,7 +208,7 @@
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 fw-bold">Contato</h5>
                     <p><i class="fa-solid fa-envelope me-3"></i> ecotrendrfcb@gmail.com.br</p>
-                    <p><i class="fa-solid fa-phone me-3"></i> (11) 99999-9999</p>
+                    <p><i class="fa-solid fa-phone me-3"></i> (11) 97410-7432</p>
                     <p><i class="fa-solid fa-location-dot me-3"></i> São Paulo, SP</p>
                 </div>
 
@@ -233,5 +233,33 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        const textoContador = document.getElementById('contador-carrinho');
+
+        let itensNoCarrinho = localStorage.getItem('qtdEcoTrend');
+        if (itensNoCarrinho === null) {
+            itensNoCarrinho = 0;
+        }
+
+        if (textoContador) {
+            textoContador.innerText = itensNoCarrinho;
+        }
+
+        const botoesComprar = document.querySelectorAll('.btn-adicionar');
+
+        // 5. Adiciona a ação de clique em cada botão
+        botoesComprar.forEach(function(botao) {
+            botao.addEventListener('click', function(evento) {
+                evento.preventDefault(); 
+                
+                itensNoCarrinho++;  
+                localStorage.setItem('qtdEcoTrend', itensNoCarrinho); 
+                
+                textoContador.innerText = itensNoCarrinho; 
+                
+                alert("Produto adicionado ao carrinho!");
+            });
+        });
+    </script>
 </body>
 </html>
